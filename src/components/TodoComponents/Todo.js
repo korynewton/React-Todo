@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Todo = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
-        <h6>{props.item['task']}</h6>
+        <h3>{props.item.task}</h3>
     )
 }
 

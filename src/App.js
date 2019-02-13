@@ -25,14 +25,28 @@ class App extends React.Component {
     super();
     this.state = {
      todoData: todoData,
+     currentValue: '',
     };
   }
+
+updateValue = (event) => {
+  console.log(event.target.value)
+  this.setState({
+    currentValue: event.target.value
+  })
+}
+
+
+
   render() {
     // console.log(this.state.todoData)
     return (
       <div>
         <TodoList todoArray = {this.state.todoData} />
-        <TodoForm />
+        <TodoForm
+        value = {this.state.currentValue}
+        handleChange = {this.updateValue}
+        />
       </div>
     );
   }
