@@ -29,6 +29,23 @@ class App extends React.Component {
     };
   }
 
+addTodo = (event) => {
+  event.preventDefault();
+  const toAdd = {
+    task: this.state.currentValue,
+    id: Date.now() ,
+    completed: false
+  }
+
+  this.setState({
+    todoData : [...this.state.todoData, toAdd],
+    currentValue: ''
+  })
+
+
+  console.log(this.state.currentValue)
+}
+
 updateValue = (event) => {
   console.log(event.target.value)
   this.setState({
@@ -46,6 +63,7 @@ updateValue = (event) => {
         <TodoForm
         value = {this.state.currentValue}
         handleChange = {this.updateValue}
+        handleAdd = {this.addTodo}
         />
       </div>
     );
