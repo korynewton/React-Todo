@@ -3,7 +3,7 @@ import React from 'react';
 const Todo = (props) => {
     console.log(props)
     return (
-        <h6>Test</h6>
+        <h6>{props.item['task']}</h6>
     )
 }
 
