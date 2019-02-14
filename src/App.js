@@ -32,18 +32,19 @@ class App extends React.Component {
   }
 
 addTodo = (event) => {
+  if (this.state.value === '') {
+    return
+  }
   event.preventDefault();
   const toAdd = {
     task: this.state.currentValue,
     id: Date.now() ,
     completed: false
   }
-
   this.setState({
     todoData : [...this.state.todoData, toAdd],
     currentValue: ''
   })
-  // console.log(this.state.currentValue)
 }
 
 updateValue = (event) => {
@@ -53,7 +54,7 @@ updateValue = (event) => {
   })
 }
 
-toggleItem = itemId=> {
+toggleItem = itemId => {
   this.setState({
     todoData: this.state.todoData.map(item => {
       if (itemId === item.id) {
