@@ -66,6 +66,14 @@ toggleItem = itemId=> {
 };
 
 
+clearCompleted = (e) => {
+  e.preventDefault();
+  this.setState({
+    todoData: this.state.todoData.filter(item => !item.completed)
+  })
+}
+
+
 
   render() {
     // console.log(this.state.todoData)
@@ -76,6 +84,7 @@ toggleItem = itemId=> {
         value = {this.state.currentValue}
         handleChange = {this.updateValue}
         handleAdd = {this.addTodo}
+        clearCompleted={this.clearCompleted}
         />
       </div>
     );
