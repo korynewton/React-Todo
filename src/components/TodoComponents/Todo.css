@@ -4,5 +4,10 @@
 }
 
 .todoItem:hover {
-    transform: scale(1.1)
+    transform: scale(1.1);
+}
+
+.todoItem {
+    font-family: cursive;
+    
 }
