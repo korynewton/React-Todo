@@ -9,7 +9,7 @@ const TodoList = (props) => {
     // console.log(mapped)
         
     return (
-        <div>
+        <div className={'listBody'}>
             {props.todoArray.map(item => (
                 <Todo item={item} key={item.id} toggleItem={props.toggleItem}/>
             ))}

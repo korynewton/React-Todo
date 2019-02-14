@@ -1,0 +1,11 @@
+.listContainer {
+    border: 1px solid black;
+    background-color: #f9f8e8;
+    padding-bottom: 20px;
+}
+
+.listContainer h2 {
+    text-align: center;
+    text-decoration: underline;
+    color: #0a5a65
+}

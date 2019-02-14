@@ -1,0 +1,29 @@
+button {
+    background-color: #c1524c;
+    width: 120px;
+    height:40px;
+    margin: 0 5px;
+    font-size: 12px;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-weight: 500;
+}
+button:hover {
+    border: 1px solid #ebb96f;
+    cursor: pointer;
+    transform: scale(1.1)
+}
+.form {
+    display: flex;
+    justify-content: center;
+    /* border:1px solid black; */
+    /* height: 100px; */
+}
+
+.form input {
+    margin: auto 0;
+    max-height: 25px;
+    width:200px;
+    margin-right: 20px;
+}

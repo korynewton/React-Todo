@@ -78,7 +78,8 @@ clearCompleted = (e) => {
   render() {
     // console.log(this.state.todoData)
     return (
-      <div>
+      <div className={'listContainer'}>
+        <h2>Todo List:</h2>
         <TodoList todoArray = {this.state.todoData} toggleItem={this.toggleItem} />
         <TodoForm
         value = {this.state.currentValue}
