@@ -41,17 +41,29 @@ addTodo = (event) => {
     todoData : [...this.state.todoData, toAdd],
     currentValue: ''
   })
-
-
-  console.log(this.state.currentValue)
+  // console.log(this.state.currentValue)
 }
 
 updateValue = (event) => {
-  console.log(event.target.value)
+  // console.log(event.target.value)
   this.setState({
     currentValue: event.target.value
   })
 }
+
+toggleItem = itemId=> {
+  this.setState({
+    todoData: this.state.todoData.map(item => {
+      if (itemId === item.id) {
+        return {
+          ...item,
+          completed: !item.completed
+        };
+      }
+      return item;
+    })
+  });
+};
 
 
 
@@ -59,7 +71,7 @@ updateValue = (event) => {
     // console.log(this.state.todoData)
     return (
       <div>
-        <TodoList todoArray = {this.state.todoData} />
+        <TodoList todoArray = {this.state.todoData} toggleItem={this.toggleItem} />
         <TodoForm
         value = {this.state.currentValue}
         handleChange = {this.updateValue}
